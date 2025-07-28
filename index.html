@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,125 +7,109 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="min-h-screen bg-white text-black">
- <header class="bg-yellow-400 py-8 shadow-md">
-  <div class="container mx-auto flex items-center justify-center px-4">
-    <img src="LOGO HORIZONRAL C&A.png" alt="Logo C&A Servicios" class="h-20 md:h-24" />
-  </div>
- </header>
 
-<!-- Banner con video y texto responsive -->
- 
-<section class="w-full bg-black py-8 px-4">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-    
-    <!-- Texto -->
-    <div class="text-center md:text-left flex flex-col justify-center">
-      <h2 class="text-white text-3xl md:text-5xl font-bold leading-tight">
-        C&A Servicios tu aliado para proyectos que optimizan recursos y perduran!
-        <br />
-        <span class="text-yellow-400">Soluciones integrales para obras eficientes y sostenibles </span>
-       
-      </h2>
+  <!-- HEADER -->
+  <header class="bg-yellow-400 py-8 shadow-md">
+    <div class="container mx-auto flex items-center justify-center px-4">
+      <img src="LOGO HORIZONRAL C&A.png" alt="Logo C&A Servicios" class="h-20 md:h-24" />
     </div>
+  </header>
 
-    <!-- Video -->
-    <div class="flex justify-center">
-      <div class="relative w-[400px] h-[500px] overflow-hidden rounded-lg shadow-2xl ring-4 ring-yellow-400">
-        <video autoplay muted loop playsinline class="w-full h-full object-cover">
-          <source src="video web ultimo.mp4" type="video/mp4">
-          Tu navegador no soporta video en HTML5.
-        </video>
-      </div>
-    </div>
-
-  </div>
-</section>
-
->
-
-<main class="container mx-auto px-4 py-10">
-    <section class="text-center mb-12">
+  <!-- BANNER CON TEXTO Y VIDEO -->
+  <section class="w-full bg-black py-8 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
       
-      <p class="text-xl md:text-2xl leading-relaxed font-medium">
-  ¿Necesitás transformar tu hogar, empresa o edificio en un espacio único y de alta calidad?<br/>
-  Estamos acá para hacerlo posible.
-</p>
+      <!-- Texto -->
+      <div class="text-center md:text-left">
+        <h2 class="text-white text-3xl md:text-5xl font-bold">
+          Construimos tu futuro hoy:<br>
+          <span class="text-yellow-400">Soluciones integrales</span> en construcción y eficiencia
+        </h2>
+      </div>
 
+      <!-- Video -->
+      <div class="flex justify-center">
+        <div class="relative w-[400px] h-[500px] overflow-hidden rounded-lg ring-4 ring-yellow-400">
+          <video autoplay muted loop playsinline class="w-full h-full object-cover">
+            <source src="video web ultimo.mp4" type="video/mp4">
+            Tu navegador no soporta video en HTML5.
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container mx-auto px-4 py-10">
+
+    <!-- Texto introductorio -->
+    <section class="text-center mb-12">
+      <h1 class="text-3xl font-bold mb-4">Soluciones integrales en construcción y eficiencia</h1>
+      <p class="text-lg">
+        ¿Necesitás transformar tu hogar, empresa o edificio en un espacio único y de alta calidad?<br/>
+        Estamos acá para hacerlo posible.
+      </p>
     </section>
 
-   <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
-  Nuestros Servicios
-</h2>
-<ul class="list-disc list-inside space-y-4 text-left text-lg md:text-xl leading-relaxed text-gray-800">
-  <li>Instalación de paneles con alta eficiencia térmica y acústica para techos y muros</li>
-  <li>Estructuras metálicas</li>
-  <li>Revestimientos premium</li>
-  <li>Instalaciones eléctricas profesionales</li>
-  <li>Construcción con Steel Framing / Acero al carbono / Galpones y Naves Industriales</li>
-  <li>Construcción de Casas o Cabañas de madera, decks, pérgolas y porches</li>
-  <li>Sistemas de seguridad: Alarma, Videovigilancia, Domóticos, Control de Acceso</li>
-  <li>Mantenimiento certificado de áreas verdes, Poda, Apeo, Volteo</li>
-  <li>Limpieza final de obra</li>
-  <li>Asesoramiento personalizado durante todo el proceso constructivo</li>
-</ul>
-
-<p class="mt-8 text-xl md:text-2xl font-semibold leading-relaxed text-gray-900">
-  Si buscás un servicio profesional, estamos listos para transformar tu proyecto en realidad.
-  ¡Contactanos hoy mismo!
-</p>
-
-</div>
+    <!-- SERVICIOS E IMÁGENES -->
+    <section class="grid md:grid-cols-2 gap-10 mb-12">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Nuestros Servicios</h2>
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li>Instalación de paneles con alta eficiencia térmica y acústica para techos y muros</li>
+          <li>Estructuras metálicas</li>
+          <li>Revestimientos premium</li>
+          <li>Instalaciones eléctricas profesionales</li>
+          <li>Construcción con Steel Framing / Galpones y Naves Industriales</li>
+          <li>Construcción de casas o cabañas de madera, decks, pérgolas y porches</li>
+          <li>Sistemas de seguridad: Alarma, Videovigilancia, Domótica</li>
+          <li>Mantenimiento de áreas verdes, poda y limpieza</li>
+          <li>Limpieza final de obra</li>
+          <li>Asesoramiento personalizado en todo el proceso constructivo</li>
+        </ul>
+        <p class="mt-6 text-lg font-medium">
+          Si buscás un servicio profesional, estamos listos para transformar tu proyecto en realidad.
+          ¡Contactanos hoy mismo!
+        </p>
+      </div>
 
       <div class="grid grid-cols-2 gap-4">
-  <img src="19 DE JULIO 15.jpeg" alt="Imagen 1" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
-  <img src="19D.jpeg" alt="Imagen 2" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
-  <img src="19 DE JULIO 14.jpeg" alt="Imagen 3" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
-  <img src="19 DE JULIO 12.jpeg" alt="Imagen 4" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
-  <img src="19 DE JULIO 11.jpeg" alt="Imagen 5" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
-  <img src="19 DE JULIO 9.jpeg" alt="Imagen 6" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+        <img src="19 DE JULIO 15.jpeg" alt="Imagen 1" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+        <img src="19D.jpeg" alt="Imagen 2" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+        <img src="19 DE JULIO 14.jpeg" alt="Imagen 3" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+        <img src="19 DE JULIO 12.jpeg" alt="Imagen 4" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+        <img src="19 DE JULIO 11.jpeg" alt="Imagen 5" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+        <img src="19 DE JULIO 9.jpeg" alt="Imagen 6" class="w-full h-48 object-cover rounded-xl shadow mx-auto" />
+      </div>
+    </section>
 
-<!-- Botón flotante de WhatsApp con logo centrado -->
-<a href="https://wa.me/5492944701155" target="_blank" style="
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-    z-index: 1000;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-         alt="WhatsApp" style="width: 32px; height: 32px;">
-</a>
-  <!-- Botón flotante de Instagram -->
-<a href="https://www.instagram.com/cyaserviciosbariloche?igsh=OTVjZ3RscWp3Mm5l" target="_blank" 
-   class="fixed bottom-24 right-5 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full p-3 shadow-lg hover:scale-110 transition-transform">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="34px" height="34px">
-    <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.8.5.4.8.9 1 1.5.2.5.3 1.2.4 2.4.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.8 1.5-.4.5-.9.8-1.5 1-.5.2-1.2.3-2.4.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.8-.5-.4-.8-.9-1-1.5-.2-.5-.3-1.2-.4-2.4-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .8-1.5.4-.5.9-.8 1.5-1 .5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1 5.8.1 4.8.3 4 .6 3.1 1 2.4 1.5 1.7 2.3.9 3 .4 3.7.1 4.6c-.3.8-.5 1.8-.5 3 0 1.2 0 1.6-.1 4.9s0 3.7.1 4.9c.1 1.2.2 2.2.5 3 .3.9.8 1.6 1.6 2.3.7.7 1.4 1.2 2.3 1.5.8.3 1.8.5 3 .5 1.2 0 1.6 0 4.9.1s3.7 0 4.9-.1c1.2-.1 2.2-.2 3-.5.9-.3 1.6-.8 2.3-1.5.7-.7 1.2-1.4 1.5-2.3.3-.8.5-1.8.5-3 0-1.2 0-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.2-.2-2.2-.5-3-.3-.9-.8-1.6-1.5-2.3C21.6.9 20.9.4 20 .1c-.8-.3-1.8-.5-3-.5-1.2 0-1.6 0-4.9-.1z"/>
-    <path d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4z"/>
-    <circle cx="18.4" cy="5.6" r="1.4"/>
-  </svg>
-</a>
-</section>
+    <!-- SEPARADOR -->
+    <div class="mt-20"></div>
 
-<section class="bg-yellow-100 p-6 rounded-xl shadow text-center">
-  <h2 class="text-xl font-semibold mb-2">Contacto</h2>
-  <p>📍 San Carlos de Bariloche / Dina Huapi y alrededores</p>
-  <p>📱 WhatsApp: <a href="https://wa.me/5492944701155" class="text-blue-600 underline">+54 9 294 470-1155</a></p>
-  <p>📧 Email: <a href="mailto:servicioscyabariloche@gmail.com" class="text-blue-600 underline">servicioscyabariloche@gmail.com</a></p>
-</section>
+    <!-- CONTACTO CENTRADO -->
+    <section class="w-full flex justify-center mb-10">
+      <div class="bg-yellow-100 p-6 rounded-xl shadow text-center max-w-xl w-full mx-4">
+        <h2 class="text-xl font-semibold mb-2">Contacto</h2>
+        <p>📍 San Carlos de Bariloche / Dina Huapi y alrededores</p>
+        <p>📱 WhatsApp:
+          <a href="https://wa.me/5492944701155" class="text-blue-600 underline">+54 9 294 470-1155</a>
+        </p>
+        <p>📧 Email:
+          <a href="mailto:servicioscyabariloche@gmail.com" class="text-blue-600 underline">servicioscyabariloche@gmail.com</a>
+        </p>
+      </div>
+    </section>
 
-<footer class="bg-yellow-400 text-center py-4 mt-10">
-  <p class="text-black font-medium">© 2025 C&A Servicios - Todos los derechos reservados</p>
-</footer>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="bg-yellow-400 text-center py-4 mt-10">
+    <p class="text-black font-medium">© 2025 C&A Servicios - Todos los derechos reservados</p>
+  </footer>
 
 </body>
 </html>
+
 
 
