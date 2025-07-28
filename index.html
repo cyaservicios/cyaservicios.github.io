@@ -74,12 +74,12 @@
     <circle cx="18.4" cy="5.6" r="1.4"/>
   </svg>
 </a>
- <!-- Banner con video y texto responsive -->
-<section class="w-full bg-black py-0 mb-16">
-  <div class="w-full flex flex-col items-center">
-
-    <!-- Texto encima del video -->
-    <div class="w-full text-center py-6 px-4 bg-black">
+<!-- Banner con texto arriba y video debajo -->
+<section class="w-full bg-black py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <!-- Texto -->
+    <div class="text-center mb-8">
       <h2 class="text-white text-3xl md:text-5xl font-bold leading-tight">
         Construimos tu futuro hoy:
         <br />
@@ -88,9 +88,9 @@
       </h2>
     </div>
 
-    <!-- Video a pantalla completa -->
-    <div class="relative w-full overflow-hidden ring-4 ring-yellow-400">
-      <video autoplay muted loop playsinline class="w-full aspect-video object-cover">
+    <!-- Video a pantalla completa (responsive) -->
+    <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl ring-4 ring-yellow-400">
+      <video autoplay muted loop playsinline class="w-full h-auto object-cover">
         <source src="video web ultimo.mp4" type="video/mp4">
         Tu navegador no soporta video en HTML5.
       </video>
@@ -98,7 +98,6 @@
 
   </div>
 </section>
-
 <div class="mt-20"></div>
     <section class="bg-yellow-100 p-6 rounded-xl shadow text-center max-w-xl mx-auto mb-10">
       <h2 class="text-xl font-semibold mb-2">Contacto</h2>
