@@ -184,7 +184,48 @@
 </div>
 
 </section>
+
     <!-- GALERÍA DE PRODUCTOS AUTOMÁTICA -->
+<section class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8 text-yellow-600 text-center">Conocé nuestros productos</h2>
+
+    <div class="relative overflow-hidden">
+      <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+        <div class="min-w-full flex flex-col items-center text-center p-4">
+          <img src="productos/ignicold.jpeg" alt="Ignicold" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
+          <h3 class="text-xl font-semibold">IGNICOLD</h3>
+          <p class="text-sm text-gray-600 mt-2">Fachadas y Muros</p>
+        </div>
+        <div class="min-w-full flex flex-col items-center text-center p-4">
+          <img src="productos/tejatech.jpeg" alt="Tejatech" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
+          <h3 class="text-xl font-semibold">TEJATECH</h3>
+          <p class="text-sm text-gray-600 mt-2">Techos y Cubiertas</p>
+        </div>
+        <div class="min-w-full flex flex-col items-center text-center p-4">
+          <img src="productos/panel_entrepiso.jpeg" alt="Panel Entrepiso" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
+          <h3 class="text-xl font-semibold">PANEL ENTREPISO</h3>
+          <p class="text-sm text-gray-600 mt-2">Pisos y Entrepisos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPT DE DESPLAZAMIENTO AUTOMÁTICO -->
+<script>
+  let currentIndex = 0;
+  const carousel = document.getElementById("carousel");
+  const items = carousel.children;
+  const totalItems = items.length;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, 3000); // Cambia cada 3 segundos
+</script>
+
+    <!-- GALERÍA DE PRODUCTOS THEO DINAMICS -->
 <section class="py-16 bg-[#e6471b] text-white">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold uppercase mb-12 text-center">Colores y Texturas de Nuestros Paneles</h2>
