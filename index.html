@@ -171,23 +171,33 @@
   </section>
 
   <!-- BANNER VIDEO -->
-  <section class="w-full bg-black py-8 px-4">
-    <div class="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-      <div class="text-center md:text-left reveal">
-        <h3 class="text-white text-3xl md:text-4xl font-bold mb-4">C&amp;A Servicios</h3>
-        <p class="text-gray-200">Soluciones constructivas integrales y eficientes — transformamos tu proyecto en realidad.</p>
-      </div>
+    <!-- SECCIÓN DE VIDEO -->
+  <section class="bg-black text-white py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold">C&A Servicios</h2>
+      <p class="text-lg text-gray-300 mt-2">
+        Soluciones constructivas integrales y eficientes — transformamos tu proyecto en realidad.
+      </p>
+    </div>
 
-      <div class="flex justify-center reveal">
-        <div class="video-frame ring-4 ring-yellow-400 soft-shadow">
-          <video autoplay muted loop playsinline class="w-full h-auto object-cover rounded-2xl">
-            <source src="vid_ig octubre ok final.mp4" type="video/mp4">
-            Tu navegador no soporta video en HTML5.
-          </video>
-        </div>
+    <div class="flex justify-center items-center px-4">
+      <div class="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl border-4 border-yellow-400">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          controls
+          class="w-full h-auto object-contain bg-black"
+          style="aspect-ratio: 16 / 9; display: block; margin: auto; max-height: 80vh;"
+        >
+          <source src="vid_ig octubre ok final.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
       </div>
     </div>
   </section>
+
 
   <!-- MAIN CONTENT -->
   <main class="container mx-auto px-4 py-12">
