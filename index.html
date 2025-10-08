@@ -1,17 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHV3DG9N74"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VHV3DG9N74');
-  </script>
-
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C&A Servicios | Construcción Steel Framing Bariloche</title>
 
   <!-- SEO -->
@@ -20,483 +11,196 @@
   <meta name="author" content="C&A Servicios">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="C&A Servicios - Bariloche y Dina Huapi">
-  <meta property="og:description" content="Construcción y soluciones integrales en Bariloche y Dina Huapi. Steel framing, estructuras metálicas, electricidad profesional y más.">
-  <meta property="og:image" content="https://cyaservicios.github.io/LOGO%20HORIZONRAL%20C&A.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cyaservicios.github.io/">
+  <meta property="og:title" content="C&A Servicios | Construcción Steel Framing Bariloche" />
+  <meta property="og:description" content="Construcción premium en Steel Framing con aislación térmica y rapidez garantizada. Bariloche y Patagonia.">
+  <meta property="og:image" content="https://cyaservicios.github.io/logo-cya-horizontal.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cyaservicios.github.io/" />
 
-  <!-- Fonts & Tailwind -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Custom styles -->
   <style>
-    :root{
-      --brand-yellow: #FBBF24; /* softer yellow */
-      --brand-yellow-dark: #F59E0B;
-      --brand-black: #0f172a;
-      --muted: #6B7280;
-      --glass: rgba(255,255,255,0.06);
-    }
-
-    body { font-family: 'Inter', sans-serif; background: #fff; color: var(--brand-black); -webkit-font-smoothing:antialiased; }
-    .btn-cta {
-      background: linear-gradient(90deg, #111827 0%, #0b0f13 100%);
-      color: #fff;
-    }
-    .btn-wht {
-      background: linear-gradient(90deg, #ffffff 0%, #f8f7f2 100%);
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
       color: #111827;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
 
-    /* subtle textured background for hero area */
-    .hero-bg {
-      background-image: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.03), transparent 10%),
-                        linear-gradient(180deg,#fff 0%, #fff 100%);
+    header {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.95);
     }
 
-    /* fade-in on scroll */
-    .reveal { opacity: 0; transform: translateY(12px); transition: all 600ms cubic-bezier(.2,.9,.2,1); }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* carousel basic */
-    #carousel { display:flex; width:100%; }
-    #carousel > .slide { min-width:100%; box-sizing:border-box; }
-
-    /* auto-scrolling marquee variant */
-    .marquee-wrap { overflow:hidden; }
-    .marquee { display:flex; gap:24px; width:max-content; animation: scroll-left 36s linear infinite; }
-    .marquee:hover { animation-play-state: paused; }
-    @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    /* Video responsive */
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      margin: auto;
     }
 
-    /* responsive video banner adjustments */
-    .video-frame { width:100%; height:380px; border-radius:16px; overflow:hidden; }
-    @media(min-width:768px){ .video-frame { height:500px; } }
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    /* subtle box shadows */
-    .soft-shadow { box-shadow: 0 10px 30px rgba(2,6,23,0.08); }
+    /* Fondo de transición secciones */
+    section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
 
-    /* image circle size */
-    .circle-img { width:128px; height:128px; border-radius:9999px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#fff; }
+    section:nth-of-type(even) {
+      background-color: #fff7dc;
+    }
 
-    /* make mobile nav links bigger */
-    #mobile-menu a { font-size: 1.05rem; }
-  </style> 
+    /* Botones con degradado */
+    .btn-gradient {
+      background: linear-gradient(90deg, #facc15, #fbbf24);
+      color: #000;
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(90deg, #fbbf24, #facc15);
+      transform: scale(1.05);
+      color: #111;
+    }
+
+  </style>
 </head>
 
-<body class="min-h-screen">
+<body>
 
-  <!-- HEADER (responsive) -->
- <header class="bg-yellow-400/95 shadow-md sticky top-0 z-50">
-  <div class="container mx-auto flex flex-col items-center justify-center px-4 py-3 text-center">
-    <a href="index.html" class="flex items-center justify-center mb-2">
-      <img src="logo-cya-horizontal.png" alt="C&A Servicios" class="h-16 md:h-24 object-contain mx-auto">
-    </a>
-
-      <nav class="hidden md:flex items-center space-x-6 font-semibold text-black">
-        <a href="index.html" class="hover:text-white transition">Inicio</a>
-        <a href="quienes-somos.html" class="hover:text-white transition">Quiénes Somos</a>
-        <a href="que_hacemos.html" class="hover:text-white transition">Qué Hacemos</a>
-        <a href="productos.html" class="hover:text-white transition">Nuestros Productos</a>
-        <a href="https://wa.me/5492944701155" target="_blank" class="btn-wht px-4 py-2 rounded-lg soft-shadow hover:scale-105 transition">Contáctenos</a>
+  <!-- HEADER FIJO CON LOGO CENTRADO -->
+  <header class="fixed top-0 left-0 w-full z-50 shadow-lg">
+    <div class="flex flex-col items-center py-3">
+      <img src="logo-cya-horizontal.png" alt="C&A Servicios" class="h-16 mx-auto mb-2">
+      <nav class="flex flex-wrap justify-center space-x-6 text-black font-semibold text-lg">
+        <a href="index.html" class="hover:text-yellow-600 transition">Inicio</a>
+        <a href="quienes-somos.html" class="hover:text-yellow-600 transition">Quiénes Somos</a>
+        <a href="que_hacemos.html" class="hover:text-yellow-600 transition">Qué Hacemos</a>
+        <a href="productos.html" class="hover:text-yellow-600 transition">Nuestros Productos</a>
+        <a href="https://wa.me/5492944701155" target="_blank" class="btn-gradient px-4 py-2 rounded-lg shadow-md">Contáctenos</a>
       </nav>
-
-      <!-- mobile menu button -->
-      <div class="md:hidden flex items-center gap-3">
-        <a href="https://wa.me/5492944701155" target="_blank" class="bg-green-500 text-white p-2 rounded-full shadow-md">
-          <!-- whatsapp icon small -->
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="white"><path d="M..."/></svg>
-        </a>
-
-        <button id="menu-btn" class="p-2 rounded-md focus:outline-none" aria-label="Abrir menú">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="black">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-yellow-300/95 border-t border-yellow-500">
-      <div class="px-6 py-4 space-y-2 text-center font-semibold">
-        <a href="index.html" class="block py-2 hover:text-white">Inicio</a>
-        <a href="quienes-somos.html" class="block py-2 hover:text-white">Quiénes Somos</a>
-        <a href="que_hacemos.html" class="block py-2 hover:text-white">Qué Hacemos</a>
-        <a href="productos.html" class="block py-2 hover:text-white">Nuestros Productos</a>
-        <a href="https://wa.me/5492944701155" target="_blank" class="block bg-white text-yellow-700 mx-auto px-4 py-2 rounded-lg shadow">Contáctenos</a>
-      </div>
     </div>
   </header>
 
-  <!-- HERO PROMOCIONAL -->
-  <section class="hero-bg py-16 md:py-20">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-      <div class="md:w-1/2 reveal">
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight uppercase mb-4">¡NO PAGUE DE MÁS EN SUS PROYECTOS!</h1>
-        <p class="text-lg md:text-xl text-gray-800 mb-6">El m² de construcción tradicional en Argentina está entre <strong>USD 1.500 y 1.600</strong>. En <strong>C&amp;A Servicios</strong> construimos <span class="text-yellow-600 font-bold">MÁS BARATO, MÁS RÁPIDO</span> y con <span class="text-yellow-600 font-bold">MEJOR AISLACIÓN</span> en Bariloche.</p>
+  <!-- ESPACIO PARA QUE NO SE SUPERPONGA EL HEADER -->
+  <div class="h-40"></div>
 
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="https://wa.me/5492944701155" target="_blank" class="inline-flex items-center justify-center btn-cta px-6 py-3 rounded-xl text-lg font-semibold shadow-lg hover:scale-105 transition">
-            💬 DESCUBRIR MI PRECIO CERRADO AHORA
-          </a>
-          <a href="#contacto" class="inline-flex items-center justify-center btn-wht px-6 py-3 rounded-xl text-lg font-semibold soft-shadow hover:scale-105 transition">
-            ✉️ Enviá tu consulta
-          </a>
-        </div>
+  <!-- HERO PRINCIPAL -->
+  <section class="py-16 px-6 text-center md:text-left bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="md:w-1/2 space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 uppercase">
+          ¡NO PAGUE EL PRECIO DEL LADRILLO!
+        </h1>
+        <p class="text-lg md:text-xl font-medium text-gray-700">
+          El m² de construcción tradicional en Argentina está entre <b>USD 1.500 y 1.600</b>.<br>
+          En <b>C&A Servicios</b>, construimos 
+          <span class="text-yellow-600 font-bold">MÁS BARATO</span>, 
+          <span class="text-yellow-600 font-bold">MÁS RÁPIDO</span> 
+          y con <span class="text-yellow-600 font-bold">MEJOR AISLACIÓN</span> en Bariloche.
+        </p>
+
+        <a href="https://wa.me/5492944701155" target="_blank"
+           class="inline-block btn-gradient px-8 py-4 rounded-xl shadow-lg text-lg uppercase">
+           💬 DESCUBRIR MI PRECIO CERRADO AHORA
+        </a>
       </div>
 
-      <div class="md:w-1/2 reveal">
-        <img src="techo con paredes y placas paredes.png" alt="Construcción Steel Framing en Bariloche" class="rounded-2xl soft-shadow w-full object-cover">
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST / WHY -->
-  <section class="py-12 bg-white text-center">
-    <div class="container mx-auto px-4 reveal">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">¿POR QUÉ CONFIAR EN C&amp;A SERVICIOS?</h2>
-      <p class="max-w-3xl mx-auto text-gray-700 mb-6">La única garantía que importa es la local. Desde hace más de <strong>5 años</strong> trabajamos en la Patagonia. A diferencia de quienes vienen y se van, <strong>nosotros vivimos aquí</strong>. Nos ve en la obra, en la calle y respondemos por cada proyecto.</p>
-
-      <ul class="max-w-3xl mx-auto text-left list-disc list-inside space-y-3 text-lg text-gray-700">
-        <li><strong>Pioneros en la Patagonia:</strong> +5 años de trayectoria en Steel Framing.</li>
-        <li><strong>Compromiso 24/7:</strong> Atención constante a su proyecto.</li>
-        <li><strong>Somos de Bariloche:</strong> su vecino y su respaldo local.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- BANNER VIDEO -->
-  <section class="w-full bg-black py-8 px-4">
-    <div class="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-      <div class="text-center md:text-left reveal">
-        <h3 class="text-white text-3xl md:text-4xl font-bold mb-4">C&amp;A Servicios</h3>
-        <p class="text-gray-200">Soluciones constructivas integrales y eficientes — transformamos tu proyecto en realidad.</p>
-      </div>
-
-      <div class="flex justify-center reveal">
-        <div class="video-frame ring-4 ring-yellow-400 soft-shadow">
-          <video autoplay muted loop playsinline class="w-full h-auto object-cover rounded-2xl">
-            <source src="vid_ig octubre ok final.mp4" type="video/mp4">
-            Tu navegador no soporta video en HTML5.
-          </video>
-        </div>
+      <div class="md:w-1/2">
+        <img src="techo con paredes y placas paredes.png" 
+             alt="Construcción Steel Framing en Bariloche"
+             class="rounded-2xl shadow-xl w-full object-cover">
       </div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="container mx-auto px-4 py-12">
+  <!-- SECCIÓN DE VIDEO -->
+  <section class="bg-black text-white py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold">C&A Servicios</h2>
+      <p class="text-lg text-gray-300 mt-2">
+        Soluciones constructivas integrales y eficientes — transformamos tu proyecto en realidad.
+      </p>
+    </div>
 
-    <!-- INTRO -->
-    <section class="text-center mb-12 reveal">
-      <h1 class="text-2xl md:text-3xl font-bold mb-4">Construyendo tu futuro con eficiencia y calidad</h1>
-      <p class="text-lg text-gray-700">¿Necesitás transformar tu hogar, empresa o edificio en un espacio único y de alta calidad? Estamos acá para hacerlo posible.</p>
-    </section>
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="vid_ig octubre ok final.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+    </div>
+  </section>
 
-    <!-- SERVICIOS + GALERÍA DE FOTOS -->
-    <section class="grid md:grid-cols-2 gap-12 mb-16">
-      <div class="reveal">
-        <h2 class="text-3xl font-bold mb-6 text-gray-800">Nuestros Servicios</h2>
-        <ul class="space-y-4 text-lg text-left text-gray-700">
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Instalación de paneles con alta eficiencia térmica y acústica para techos y muros
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Estructuras metálicas
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Revestimientos premium
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Instalaciones eléctricas profesionales
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Construcción con Steel Framing / Galpones y Naves Industriales
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Construcción de casas o cabañas de madera, decks, pérgolas y porches
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Sistemas de seguridad: Alarma, Videovigilancia, Domótica
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Mantenimiento de áreas verdes, poda y limpieza
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Limpieza final de obra
-          </li>
-          <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Asesoramiento personalizado en todo el proceso constructivo
-          </li>
-        </ul>
+  <!-- SECCIÓN DESTACADA: CONFIANZA LOCAL -->
+  <section class="py-16 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-gray-900">¿POR QUÉ CONFIAR EN C&A SERVICIOS?</h2>
+    <p class="max-w-3xl mx-auto text-lg text-gray-700 mb-8">
+      Desde hace más de <b>5 años</b> trabajamos en la Patagonia, brindando confianza y resultados.  
+      Somos <b>de Bariloche</b>, su vecino, y respondemos personalmente por cada obra.  
+      Usted no solo compra una casa, compra la <b>tranquilidad de trabajar con profesionales locales</b>.
+    </p>
 
-        <p class="mt-8 text-xl font-medium text-gray-800">Si buscás un servicio profesional, estamos listos para transformar tu proyecto en realidad. ¡Contactanos hoy mismo!</p>
-      </div>
+    <ul class="text-left max-w-2xl mx-auto list-disc list-inside text-lg text-gray-800 space-y-2">
+      <li><b>Pioneros en la Patagonia:</b> más de 5 años de trayectoria en Steel Framing.</li>
+      <li><b>Compromiso 24/7:</b> su proyecto es nuestra prioridad.</li>
+      <li><b>Somos de Bariloche:</b> nuestro nombre es nuestra firma.</li>
+    </ul>
+  </section>
 
-      <div class="grid grid-cols-2 gap-4 reveal">
-        <div class="overflow-hidden rounded-2xl soft-shadow">
-          <img src="19 DE JULIO 15.jpeg" alt="Imagen 1" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
-        </div>
-        <div class="overflow-hidden rounded-2xl soft-shadow">
-          <img src="19D.jpeg" alt="Imagen 2" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
-        </div>
-        <div class="overflow-hidden rounded-2xl soft-shadow">
-          <img src="19 DE JULIO 14.jpeg" alt="Imagen 3" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
-        </div>
-        <div class="overflow-hidden rounded-2xl soft-shadow">
-          <img src="19 DE JULIO 12.jpeg" alt="Imagen 4" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
-        </div>
-        <div class="overflow-hidden rounded-2xl soft-shadow">
-          <img src="19 DE JULIO 11.jpeg" alt="Imagen 5" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
-        </div>
-        <div class="overflow-hidden rounded-2xl soft-shadow">
-          <img src="19 DE JULIO 9.jpeg" alt="Imagen 6" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
-        </div>
-      </div>
-    </section>
+  <!-- CONTACTO -->
+  <section class="bg-yellow-50 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4 text-gray-900">Contacto</h2>
+    <p class="mb-6 text-lg">📍 San Carlos de Bariloche / Dina Huapi y alrededores</p>
 
-    <!-- GALERÍA DE PRODUCTOS AUTOMÁTICA (carousel simple) -->
-    <section class="bg-white py-12 reveal">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-yellow-600">Trabajamos con paneles de Theo Dynamics</h2>
-        <p class="text-gray-700 mb-8">Soluciones versátiles y de alta calidad para proyectos industriales, comerciales y residenciales.</p>
-
-        <div class="relative overflow-hidden soft-shadow rounded-xl">
-          <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
-            <div class="slide min-w-full p-6 text-center">
-              <img src="IGNIROOF 50 LDR.png" alt="IGNICOLD" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
-              <h3 class="text-xl font-semibold">IGNICOLD</h3>
-              <p class="text-sm text-gray-600 mt-2">Fachadas, Muros y Galpones</p>
-            </div>
-            <div class="slide min-w-full p-6 text-center">
-              <img src="TT NGO 6K(1).png" alt="TEJATECH" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
-              <h3 class="text-xl font-semibold">TEJATECH</h3>
-              <p class="text-sm text-gray-600 mt-2">Techos y Cubiertas</p>
-            </div>
-            <div class="slide min-w-full p-6 text-center">
-              <img src="ENTREPISO PUR.png" alt="PANEL ENTREPISO" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
-              <h3 class="text-xl font-semibold">PANEL ENTREPISO</h3>
-              <p class="text-sm text-gray-600 mt-2">Pisos y Entrepisos</p>
-            </div>
-            <div class="slide min-w-full p-6 text-center">
-              <img src="FR 50 SINU BLANCO.png" alt="SINUSOIDAL" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
-              <h3 class="text-xl font-semibold">SINUSOIDAL</h3>
-              <p class="text-sm text-gray-600 mt-2">Textura Sinusoidal</p>
-            </div>
-            <div class="slide min-w-full p-6 text-center">
-              <img src="FR50 TR GRIS PIZARRA.png" alt="TRAPEZOIDAL" class="w-64 h-40 object-contain mx-auto mb-4 rounded shadow">
-              <h3 class="text-xl font-semibold">TRAPEZOIDAL</h3>
-              <p class="text-sm text-gray-600 mt-2">Textura Trapezoidal</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- THEO DYNAMICS COLORES Y TEXTURAS -->
-    <section class="py-16 bg-[#e6471b] text-white reveal">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold uppercase mb-8">Colores y Texturas de Nuestros Paneles</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
-          <!-- each circle preserves image name as requested -->
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="FR 50 SINU VERDE INGLES.png" alt="Verde Inglés" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Verde Inglés</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="FR 50 SINU NEGRO.png" alt="Negro" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Negro</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="FR50 TR BLANCO.png" alt="Blanco" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Blanco</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="FR50 TR GRIS PIZARRA.png" alt="Gris Pizarra" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Gris Pizarra</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="MR 50 ROJO TEJA.png" alt="Rojo Teja" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Rojo Teja</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="FR50 TR MARRÓN.png" alt="Marrón Cobre" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Marrón Cobre</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="FR50 TR GALVANIZADO.png" alt="Galvanizado" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Galvanizado</span>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="circle-img soft-shadow">
-              <img src="CW 50 AZUL MILENNIUM.png" alt="Cincalum / Azul" class="object-contain w-full h-full">
-            </div>
-            <span class="mt-3 text-sm font-medium text-center">Cincalum</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- contacto (centro) -->
-    <div id="contacto" class="mt-20"></div>
-    <section class="w-full flex justify-center mb-10 reveal">
-      <div class="bg-yellow-100 p-8 rounded-2xl shadow text-center max-w-lg w-full mx-4">
-        <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
-        <p class="mb-4 text-lg">📍 San Carlos de Bariloche / Dina Huapi y alrededores</p>
-
-        <div class="flex flex-col gap-4">
-          <a href="https://wa.me/5492944701155" target="_blank" class="flex items-center justify-center gap-2 bg-green-500 text-white px-5 py-3 rounded-xl shadow-md hover:scale-105 transition-transform">
-            📱 WhatsApp: +54 9 294 470-1155
-          </a>
-
-          <a href="mailto:servicioscyabariloche@gmail.com" class="flex items-center justify-center gap-2 bg-white text-black px-5 py-3 rounded-xl shadow-md hover:scale-105 transition-transform">
-            ✉️ Email: servicioscyabariloche@gmail.com
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FORMULARIO DE CONTACTO -->
-  <section class="py-12 bg-gray-100">
-    <div class="max-w-xl mx-auto px-4 text-center reveal">
-      <h2 class="text-3xl font-bold mb-6 text-yellow-600">Escribinos tu consulta</h2>
-      <form action="https://formspree.io/f/xzzvjdrl" method="POST" class="space-y-4">
-        <input type="text" name="name" placeholder="Tu nombre" required class="w-full border p-3 rounded" />
-        <input type="email" name="email" placeholder="Tu correo" required class="w-full border p-3 rounded" />
-        <textarea name="message" placeholder="Tu mensaje" required class="w-full border p-3 rounded h-32"></textarea>
-        <button type="submit" class="bg-yellow-600 text-white px-6 py-3 rounded hover:bg-yellow-700 transition">Enviar</button>
-      </form>
-      <p class="text-sm text-gray-500 mt-2">Nos pondremos en contacto lo antes posible.</p>
+    <div class="flex flex-col items-center gap-4">
+      <a href="https://wa.me/5492944701155" target="_blank"
+         class="bg-green-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform">
+         📱 WhatsApp: +54 9 294 470-1155
+      </a>
+      <a href="mailto:servicioscyabariloche@gmail.com"
+         class="btn-gradient px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition-transform">
+         ✉️ Email: servicioscyabariloche@gmail.com
+      </a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-yellow-400 text-center py-6">
-    <div class="container mx-auto px-4">
-      <p class="text-black font-medium">© 2025 C&amp;A Servicios - Todos los derechos reservados</p>
-    </div>
+  <footer class="bg-yellow-400 text-center py-4">
+    <p class="text-black font-medium">© 2025 C&A Servicios - Todos los derechos reservados</p>
   </footer>
 
-  <!-- floating WhatsApp -->
+  <!-- BOTONES FLOTANTES -->
   <a href="https://wa.me/5492944701155" target="_blank"
      class="fixed bottom-5 right-5 bg-green-500 rounded-full p-3 shadow-lg hover:scale-110 transition-transform z-50 flex items-center justify-center w-16 h-16">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
   </a>
 
-  <!-- floating IG -->
-  <a href="https://www.instagram.com/cyaserviciosbariloche?igsh=OTVjZ3RscWp3Mm5l" target="_blank"
+  <a href="https://www.instagram.com/cyaserviciosbariloche" target="_blank"
      class="fixed bottom-24 right-5 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-full p-3 shadow-lg hover:scale-110 transition-transform z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="34" height="34">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="34px" height="34px">
       <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.4.4.6.2 1 .4 1.5.8.5.4.8.9 1 1.5.2.5.3 1.2.4 2.4.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.4-.2.6-.4 1-.8 1.5-.4.5-.9.8-1.5 1-.5.2-1.2.3-2.4.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.4-.4-.6-.2-1-.4-1.5-.8-.5-.4-.8-.9-1-1.5-.2-.5-.3-1.2-.4-2.4-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.4.2-.6.4-1 .8-1.5.4-.5.9-.8 1.5-1 .5-.2 1.2-.3 2.4-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1 5.8.1 4.8.3 4 .6 3.1 1 2.4 1.5 1.7 2.3.9 3 .4 3.7.1 4.6c-.3.8-.5 1.8-.5 3 0 1.2 0 1.6-.1 4.9s0 3.7.1 4.9c.1 1.2.2 2.2.5 3 .3.9.8 1.6 1.6 2.3.7.7 1.4 1.2 2.3 1.5.8.3 1.8.5 3 .5 1.2 0 1.6 0 4.9.1s3.7 0 4.9-.1c1.2-.1 2.2-.2 3-.5.9-.3 1.6-.8 2.3-1.5.7-.7 1.2-1.4 1.5-2.3.3-.8.5-1.8.5-3 0-1.2 0-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.2-.2-2.2-.5-3-.3-.9-.8-1.6-1.5-2.3C21.6.9 20.9.4 20 .1c-.8-.3-1.8-.5-3-.5-1.2 0-1.6 0-4.9-.1z"/>
       <path d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4z"/>
       <circle cx="18.4" cy="5.6" r="1.4"/>
     </svg>
   </a>
 
-  <!-- SCRIPTS: menu, reveal on scroll, carousel autoplay -->
-  <script>
-    // Mobile menu toggle
-    document.getElementById('menu-btn').addEventListener('click', function(){
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-
-    // Reveal on scroll (fade-in)
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12 });
-
-    reveals.forEach(r => observer.observe(r));
-
-    // Simple carousel autoplay (slides full width)
-    (function(){
-      const carousel = document.getElementById('carousel');
-      if(!carousel) return;
-      const slides = carousel.children;
-      let idx = 0;
-      const total = slides.length;
-      let width = carousel.clientWidth;
-      // Resize observer to update width
-      window.addEventListener('resize', () => { width = carousel.clientWidth; carousel.style.transform = `translateX(-${idx * width}px)`; });
-
-      function goNext(){
-        idx = (idx + 1) % total;
-        carousel.style.transform = `translateX(-${idx * width}px)`;
-      }
-      let aut = setInterval(goNext, 3200);
-
-      // pause on hover
-      carousel.parentElement.addEventListener('mouseenter', () => clearInterval(aut));
-      carousel.parentElement.addEventListener('mouseleave', () => aut = setInterval(goNext, 3200));
-      // ensure initial transform
-      carousel.style.transition = 'transform 700ms ease-in-out';
-      carousel.style.transform = `translateX(0px)`;
-    })();
-  </script>
-
 </body>
 </html>
+
 
 
 
